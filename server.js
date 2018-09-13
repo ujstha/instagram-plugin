@@ -3,6 +3,7 @@
 var express = require('express');
 var app = express();
 var ig = require('instagram-node').instagram();
+const PORT = process.env.PORT || 5000
 // CONFIGURE THE APP
 // ==================================================
 // tell node where to look for site resources
@@ -31,5 +32,4 @@ ig.use({
 ig.user_self_media_recent(function(err, medias, pagination, remaining, limit) {});
 // START THE SERVER
 // ==================================================
-app.listen(4200);
-console.log('App started! Look at http://localhost:4200');
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
