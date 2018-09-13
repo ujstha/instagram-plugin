@@ -1,0 +1,31 @@
+{
+  "name": "instagram-plugin",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.9.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "instagram-node": "^0.5.8",
+    "node": "^10.10.0",
+    "nodemon": "^1.18.4",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ujstha/instagram-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ujstha/instagram-plugin/issues"
+  },
+  "homepage": "https://github.com/ujstha/instagram-plugin#readme",
+  "description": ""
+}
