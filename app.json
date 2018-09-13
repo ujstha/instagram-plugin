@@ -1,0 +1,6 @@
+{
+    "name": "instagram-plugin",
+    "description": "",
+    "repository": "https://github.com/ujstha/instagram-plugin",
+    "keywords": ["node", "express", "heroku"]
+}
