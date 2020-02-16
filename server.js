@@ -35,7 +35,7 @@ app.get("/", function(req, res) {
 // configure instagram app with your access_token
 ig.use({
   // get access token here: http://instagram.pixelunion.net/
-  access_token: "2095860555.1677ed0.03f0fa0645aa468f9453ee047019cf2d"
+  access_token: process.env.ACCESS_TOKEN
 });
 
 // START THE SERVER
