@@ -1,10 +1,27 @@
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a href="/" class="navbar-brand">
-                <span class="glyphicon glyphicon-picture"></span>
-                My Instagram Photos
-            </a>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary p-2">
+  <img
+    src="<%= user.profile_picture %>"
+    style="height: 40px; width: 40px; border-radius: 50%;"
+  />
+  <span class="text-light ml-2 mr-auto">
+    <a
+      class="d-block text-light p-0 m-0"
+      href="/"
+      style="text-decoration: none;"
+      ><%= user.full_name %></a
+    >
+    <a
+      class="d-block text-light p-0 m-0"
+      href="https://www.instagram.com/<%= user.username %>"
+      target="_blank"
+      style="text-decoration: none;"
+      >@<%= user.username %></a
+    >
+  </span>
+  <a
+    class="btn btn-dark"
+    href="https://www.instagram.com/<%= user.username %>"
+    target="_blank"
+    >Instagram Profile</a
+  >
 </nav>

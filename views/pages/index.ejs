@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <% include ../partials/head %>
-    </head>
-    <body class="container">
-        <header>
-            <% include ../partials/header %>
-        </header>
-        <main>
-            <div class="row">
-                <% grams.forEach(function(gram) { %>
-                <div class="instagram-pic col-sm-4">
-                    <a href="<%= gram.link %>" target="_blank">
-                        <img src="<%= gram.images.standard_resolution.url %>" class="imgresponsive">
-                    </a>
-                    <div class="instagram-bar">
-                        <div class="likes">
-                            <span class="glyphicon glyphicon-heart"></span>
-                            <%= gram.likes.count %>
-                        </div>
-                        <div class="comments">
-                            <span class="glyphicon glyphicon-comment"></span>
-                            <%= gram.comments.count %>
-                        </div>
-                    </div>
-                </div>
-                <% }); %>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body class="container">
+    <header>
+      <% include ../partials/header %>
+    </header>
+    <main>
+      <div class="row">
+        <% grams.forEach(function(gram) { %>
+        <div class="col-sm-4 mt-3">
+          <div
+            class="instagram-pic"
+            onclick="window.open('<%= gram.link %>','newTab')"
+          >
+            <a href="<%= gram.link %>" target="_blank">
+              <img
+                src="<%= gram.images.standard_resolution.url %>"
+                class="imgresponsive"
+                style="object-fit: cover;"
+              />
+            </a>
+            <!-- <div class="instagram-bar">
+              <div class="likes">
+                <span class="fa fa-heart"></span>
+                <%= gram.likes.count %>
+              </div>
+              <div class="comments">
+                <span class="fa fa-comments"></span>
+                <%= gram.comments.count %>
+              </div>
+            </div> -->
+            <div class="instagram-pic-overlay">
+              <div class="likes m-3">
+                <span class="fa fa-heart"></span>
+                <%= gram.likes.count %>
+              </div>
+              <div class="comments m-3">
+                <span class="fa fa-comments"></span>
+                <%= gram.comments.count %>
+              </div>
             </div>
-        </main>
-        <footer>
-            <% include ../partials/footer %>
-        </footer>
-    </body>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </main>
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
 </html>
