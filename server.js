@@ -27,7 +27,7 @@ app.get('/', function(req, res) {
 // configure instagram app with your access_token
 ig.use({
     // get access token here: http://instagram.pixelunion.net/
-    access_token: '2095860555.1677ed0.70ce892c20ea410aa9a8ee3a917bf85c',
+    access_token: '2095860555.1677ed0.03f0fa0645aa468f9453ee047019cf2d',
 });
 ig.user_self_media_recent(function(err, medias, pagination, remaining, limit) {});
 // START THE SERVER
